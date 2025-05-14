@@ -27,6 +27,9 @@ const Hero = () => {
         {heroData.map((slide) => (
           <SwiperSlide key={slide.id} className={slide.className}>
             <div className="inner">
+              <div className="img-wrap">
+                <img src={slide.mobileImg} alt={slide.title} />
+              </div>
               <div className="t-wrap">
                 <h2
                   dangerouslySetInnerHTML={{ __html: slide.title }}
@@ -36,9 +39,7 @@ const Hero = () => {
                   {slide.btnText}
                 </a>
               </div>
-              <div className="img-wrap">
-                <img src={slide.mobileImg} alt={slide.title} />
-              </div>
+
             </div>
           </SwiperSlide>
         ))}

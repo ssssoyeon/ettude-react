@@ -107,8 +107,16 @@
     }
 
     @media screen and (max-width: 1400px) {
+        .hero_nav {
+            left: 3vw;
+        }
+
         .swiper-slide {
-            height: 80rem;
+            height: 70rem;
+
+            .inner {
+                //padding: 0 4rem;
+            }
 
             &.hero_sl_1 {
                 background-size: contain;
@@ -136,12 +144,21 @@
         }
     }
 
-    @media screen and (max-width: 1111px) {
+    @media screen and (max-width: 999px) {
+        .hero .swiper-slide {
+            height: 60rem;
+        }
+    }
+
+    @media screen and (max-width: 899px) {
         .swiper-slide {
             background-image: none !important;
             /* 모든 배경 이미지 강제 제거 */
             background-color: inherit;
             background-position: top;
+            height: auto;
+            padding: 0 0 10rem;
+
 
             /* 슬라이드별 배경 이미지 제거 */
             &.hero_sl_1,
@@ -152,13 +169,17 @@
                 /* 명시적으로 제거 */
             }
 
+            .inner {
+                flex-direction: column;
+            }
+
             .img-wrap {
                 display: block;
                 /* mobileImg 표시 */
                 width: 100%;
                 height: auto;
-                position: absolute;
-                top: 10rem;
+                padding-top: 10rem;
+                margin: 5rem 0;
 
                 img {
                     width: 100%;
@@ -181,15 +202,19 @@
             }
 
             .t-wrap {
-                position: absolute;
-                left: 7.2vw;
-                bottom: 14.5rem;
+                position: static;
+                left: auto;
+                bottom: auto;
+                align-self: flex-start;
+                padding-left: 5vw;
             }
         }
 
         .hero_nav {
-            left: 7.2vw;
-            bottom: 3.9rem;
+            position: static;
+            left: auto;
+            bottom: auto;
+            padding-left: 12vw;
 
             .arr_prev {
                 background-image: url('/img/icon_main_ban_arrow_prev.png');
